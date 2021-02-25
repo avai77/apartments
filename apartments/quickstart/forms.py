@@ -10,7 +10,6 @@ class PostForm(forms.ModelForm):
         fields = ('name', 'image', 'description', 'phone', 'price', 'category', 'address', 'year', 'area', 'active')
         image = forms.ImageField()
 
-
 class SigninForm(forms.Form):
     username = forms.CharField()
     password = forms.CharField(widget=forms.PasswordInput)

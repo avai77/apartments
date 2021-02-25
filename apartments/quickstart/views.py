@@ -122,7 +122,6 @@ def signup(request):
     context = {"form": form}
     return render(request, "shop/signup.html", context)
 
-
 def signin(request):
     if request.method == "POST":
         form = SigninForm(request.POST)
