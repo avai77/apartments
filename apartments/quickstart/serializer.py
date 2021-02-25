@@ -1,5 +1,12 @@
 from django.contrib.auth.models import User, Group
 from rest_framework import serializers
+from .models import Advertisement
+
+
+class ProductSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Advertisement
+        fields = ('category', 'slug', 'name', 'image', "description")
 
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
